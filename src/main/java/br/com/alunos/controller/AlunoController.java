@@ -42,7 +42,10 @@ public class AlunoController {
 		alunoRepository.delete(alunos);						//passar ID para delet
 	}
 	
-	
+	@PutMapping("/aluno")
+	public Alunos atualizaAluno(@RequestBody Alunos alunos) {
+		return alunoRepository.save(alunos);				
+	}
 	
 	
 	
